@@ -3,133 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToolPipe - 50+ Free Developer Tools & 70+ REST APIs</title>
-    <meta name="description" content="Free developer tools suite: JSON formatter, Base64 encoder, UUID generator, regex tester, PDF tools, QR codes, and 70+ REST API endpoints. No signup needed.">
-    <meta name="keywords" content="developer tools, free api, json formatter, uuid generator, regex tester, pdf tools, qr code api, base64 encoder, developer utilities">
+    <title>ToolPipe - 100+ Free Developer Tools & APIs</title>
+    <meta name="description" content="100+ free developer tools and REST APIs. JSON formatter, PDF tools, QR codes, regex tester, hash generator, and more. No signup needed. MCP server for AI agents.">
     <link rel="canonical" href="https://cosai-labs.github.io/toolpipe/">
-    <meta property="og:title" content="ToolPipe - 50+ Free Developer Tools & APIs">
-    <meta property="og:description" content="50+ browser-based developer tools and 70+ REST API endpoints. No signup needed.">
+    <meta property="og:title" content="ToolPipe - 100+ Free Developer Tools & APIs">
+    <meta property="og:description" content="100+ free browser-based tools and REST APIs. No signup needed.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ToolPipe - Free Developer Tools">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebApplication","name":"ToolPipe","url":"https://cosai-labs.github.io/toolpipe/","description":"50+ free developer tools and 70+ REST API endpoints","applicationCategory":"DeveloperApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    {"@context":"https://schema.org","@type":"WebApplication","name":"ToolPipe","url":"https://cosai-labs.github.io/toolpipe/","description":"100+ free developer tools and REST API endpoints","applicationCategory":"DeveloperApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
     </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; }
-        .hero { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); padding: 80px 20px; text-align: center; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
-        h1 { font-size: 3.5rem; color: #fff; margin-bottom: 16px; letter-spacing: -1px; }
+        .hero { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); padding: 80px 20px; text-align: center; }
+        h1 { font-size: 3.5rem; color: #fff; margin-bottom: 16px; }
         .sub { font-size: 1.3rem; color: #94a3b8; max-width: 600px; margin: 0 auto 40px; line-height: 1.6; }
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; max-width: 900px; margin: 0 auto 48px; }
-        .tool { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center; transition: all 0.2s; }
-        .tool:hover { background: rgba(108,99,255,0.1); border-color: #6c63ff; transform: translateY(-2px); }
-        .tool a { color: #fff; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-        .tool .desc { color: #64748b; font-size: 0.8rem; margin-top: 4px; }
-        .cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
-        .cta { display: inline-block; padding: 16px 40px; background: #6c63ff; color: white; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.2s; }
-        .cta:hover { background: #5b52e0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(108,99,255,0.4); }
-        .cta.secondary { background: transparent; border: 2px solid rgba(255,255,255,0.3); }
-        .cta.secondary:hover { border-color: #6c63ff; background: rgba(108,99,255,0.1); }
-        .stats { display: flex; justify-content: center; gap: 48px; margin: 40px 0; flex-wrap: wrap; }
+        .stats { display: flex; gap: 32px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap; }
         .stat { text-align: center; }
-        .stat .num { font-size: 2.5rem; font-weight: 700; color: #6c63ff; }
-        .stat .label { color: #64748b; font-size: 0.9rem; margin-top: 4px; }
-        .section { max-width: 800px; margin: 0 auto; padding: 48px 20px; }
-        h2 { color: #fff; font-size: 1.8rem; margin-bottom: 24px; text-align: center; }
-        .api-demo { background: #111; border-radius: 12px; padding: 24px; font-family: monospace; font-size: 0.9rem; margin: 24px 0; overflow-x: auto; }
-        .api-demo .cmd { color: #22c55e; }
-        .api-demo .url { color: #60a5fa; }
-        .api-demo .resp { color: #e0e0e0; margin-top: 8px; }
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 24px 0; }
-        .feature { background: #111; border: 1px solid #1a1a2e; border-radius: 12px; padding: 24px; }
+        .stat-num { font-size: 2.5rem; font-weight: 800; color: #6c63ff; }
+        .stat-label { color: #64748b; font-size: 0.9rem; }
+        .cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 48px; }
+        .cta { display: inline-block; padding: 16px 40px; background: #6c63ff; color: white; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+        .cta:hover { background: #5b52ee; transform: translateY(-2px); }
+        .cta-secondary { background: transparent; border: 2px solid rgba(255,255,255,0.2); }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; max-width: 1000px; margin: 0 auto 48px; padding: 0 20px; }
+        .tool { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 16px; text-align: center; transition: all 0.2s; }
+        .tool:hover { background: rgba(108,99,255,0.1); border-color: #6c63ff; }
+        .tool a { color: #fff; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .section { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        .section h2 { font-size: 2rem; color: #fff; margin-bottom: 24px; text-align: center; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .feature { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 24px; }
         .feature h3 { color: #fff; margin-bottom: 8px; }
-        .feature p { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; }
-        .crypto-box { background: #1a1a2e; border: 1px solid #6c63ff; border-radius: 16px; padding: 32px; text-align: center; margin: 32px 0; }
-        .crypto-box h3 { color: #fff; margin-bottom: 12px; }
-        .crypto-box code { background: #0a0a0a; color: #22c55e; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; display: inline-block; margin: 8px 0; word-break: break-all; }
-        .crypto-box .note { color: #64748b; font-size: 0.85rem; margin-top: 8px; }
-        footer { text-align: center; padding: 32px; color: #64748b; font-size: 0.85rem; border-top: 1px solid #1a1a1a; }
-        footer a { color: #6c63ff; text-decoration: none; }
-        @media (max-width: 600px) { h1 { font-size: 2.2rem; } .stats { gap: 24px; } }
+        .feature p { color: #94a3b8; font-size: 0.95rem; line-height: 1.5; }
+        pre { background: #1a1a2e; color: #e0e0e0; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; margin: 20px 0; }
+        footer { text-align: center; padding: 40px; color: #666; border-top: 1px solid #1a1a1a; }
+        footer a { color: #6c63ff; text-decoration: none; margin: 0 12px; }
     </style>
 </head>
 <body>
     <div class="hero">
         <h1>ToolPipe</h1>
-        <p class="sub">50+ free browser-based developer tools and 70+ REST API endpoints. No signup, no tracking, no nonsense.</p>
-
+        <p class="sub">100+ free developer tools and REST APIs. No signup, no ads, no tracking. Also available as an MCP server for AI agents.</p>
         <div class="stats">
-            <div class="stat"><div class="num">50+</div><div class="label">Browser Tools</div></div>
-            <div class="stat"><div class="num">70+</div><div class="label">API Endpoints</div></div>
-            <div class="stat"><div class="num">$0</div><div class="label">Free Forever</div></div>
+            <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Browser Tools</div></div>
+            <div class="stat"><div class="stat-num">100+</div><div class="stat-label">API Endpoints</div></div>
+            <div class="stat"><div class="stat-num">57</div><div class="stat-label">MCP Tools</div></div>
+            <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Free Tier</div></div>
         </div>
-
         <div class="cta-group">
-            <a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/tools" class="cta">Open Tools</a>
-            <a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/docs" class="cta secondary">API Docs</a>
+            <a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/tools" class="cta">Browse All Tools</a>
+            <a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/docs" class="cta cta-secondary">API Docs</a>
+            <a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/api-keys" class="cta cta-secondary">Get API Key</a>
         </div>
-
         <div class="tools-grid">
-            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/json-formatter">JSON Formatter</a><div class="desc">Format & validate JSON</div></div>
-            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/regex-tester">Regex Tester</a><div class="desc">Test patterns live</div></div>
-            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/base64-encoder">Base64 Encoder</a><div class="desc">Encode & decode</div></div>
-            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/uuid-generator">UUID Generator</a><div class="desc">v4 UUIDs instantly</div></div>
-            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/password-generator">Password Gen</a><div class="desc">Secure passwords</div></div>
-            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/qr-code-generator">QR Generator</a><div class="desc">Create QR codes</div></div>
-            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/jwt-decoder">JWT Decoder</a><div class="desc">Decode JWT tokens</div></div>
-            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/sql-formatter">SQL Formatter</a><div class="desc">Beautify SQL</div></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/json-formatter">JSON Formatter</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/regex-tester">Regex Tester</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/qr-code-generator">QR Generator</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/password-generator">Password Gen</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/uuid-generator">UUID Generator</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/jwt-decoder">JWT Decoder</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/hash-generator">Hash Generator</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/base64-encoder">Base64 Encoder</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/dns-lookup">DNS Lookup</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/css-gradient-generator">CSS Gradients</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/color-picker">Color Picker</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/markdown-preview">Markdown Preview</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/sql-formatter">SQL Formatter</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/xml-formatter">XML Formatter</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/yaml-validator">YAML Validator</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/subnet-calculator">Subnet Calculator</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/box-shadow-generator">Box Shadow</a></div>
+            <div class="tool"><a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/flexbox-generator">Flexbox Builder</a></div>
         </div>
     </div>
 
     <div class="section">
-        <h2>Try the API</h2>
-        <div class="api-demo">
-            <div><span class="cmd">curl</span> <span class="url">https://assessing-scoop-authorities-sheet.trycloudflare.com/api/qr?data=hello</span></div>
-            <div class="resp"># Returns PNG QR code image</div>
-            <br>
-            <div><span class="cmd">curl</span> <span class="url">https://assessing-scoop-authorities-sheet.trycloudflare.com/api/uuid</span></div>
-            <div class="resp">{"uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"}</div>
-            <br>
-            <div><span class="cmd">curl</span> <span class="url">https://assessing-scoop-authorities-sheet.trycloudflare.com/api/hash?text=hello&algo=sha256</span></div>
-            <div class="resp">{"hash": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"}</div>
-        </div>
-
+        <h2>Why ToolPipe?</h2>
         <div class="features">
             <div class="feature">
-                <h3>No Signup</h3>
-                <p>Start using tools and APIs immediately. No account, no API key, no credit card required for the free tier.</p>
+                <h3>100+ Tools in One Place</h3>
+                <p>JSON, PDF, QR, hash, UUID, DNS, regex, JWT, CSV, YAML, image processing, and more. All free, all in your browser.</p>
             </div>
             <div class="feature">
-                <h3>Fast & Reliable</h3>
-                <p>All tools run client-side in your browser. API responses in under 50ms. Zero tracking, zero ads on free tier.</p>
+                <h3>REST API Access</h3>
+                <p>Every tool is also a REST API endpoint. Use from your code, scripts, or CI/CD pipelines. No API key needed for basic usage.</p>
             </div>
             <div class="feature">
-                <h3>Developer First</h3>
-                <p>Built by developers, for developers. OpenAPI spec, CORS enabled, JSON responses, proper error handling.</p>
+                <h3>MCP Server for AI Agents</h3>
+                <p>57 tools available via Model Context Protocol. Let Claude, GPT, or any AI agent use developer tools natively.</p>
             </div>
             <div class="feature">
-                <h3>Pro Plans Available</h3>
-                <p>Need more? Pro ($29/mo) gives 10K calls/day. Enterprise ($199/mo) is unlimited. Pay with crypto, no KYC.</p>
+                <h3>Pay with Crypto</h3>
+                <p>Pro tier for high-volume usage. Pay with ETH, USDC, or any ERC-20 token. No KYC, no credit card. On-chain verification.</p>
             </div>
         </div>
     </div>
 
     <div class="section">
-        <div class="crypto-box">
-            <h3>Support ToolPipe</h3>
-            <p style="color:#94a3b8;margin-bottom:12px;">Send ETH, USDC, USDT, or any ERC-20 token:</p>
-            <code>0xBCF464909b748d720fd5DDA25ad3d313Dd4b53D6</code>
-            <div class="note">Accepts: Ethereum, Polygon, Arbitrum, Base, Optimism</div>
-        </div>
+        <h2>Quick Start</h2>
+        <pre>
+# Generate a UUID
+curl https://assessing-scoop-authorities-sheet.trycloudflare.com/uuid/generate
+
+# Format JSON
+curl -X POST https://assessing-scoop-authorities-sheet.trycloudflare.com/json/format \
+  -H "Content-Type: application/json" \
+  -d '{"json": "{\"name\":\"test\"}","indent":2}'
+
+# Generate QR Code
+curl "https://assessing-scoop-authorities-sheet.trycloudflare.com/qr/generate?data=hello&size=200" > qr.png
+
+# Use as MCP Server
+npx toolpipe-mcp-server
+        </pre>
     </div>
 
     <footer>
-        <a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/">ToolPipe</a> |
-        <a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/docs">API Docs</a> |
-        <a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/pricing">Pricing</a> |
-        <a href="https://github.com/COSAI-Labs/toolpipe">GitHub</a>
-        <p style="margin-top:8px;">Built with care. Open source.</p>
+        <a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/">Live API</a>
+        <a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/docs">API Docs</a>
+        <a href="https://assessing-scoop-authorities-sheet.trycloudflare.com/pricing">Pricing</a>
+        <a href="https://github.com/COSAI-Labs/make-money-30day-challenge">GitHub</a>
     </footer>
 </body>
 </html>
