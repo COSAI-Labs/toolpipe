@@ -1,60 +1,112 @@
-# ToolPipe - 50+ Free Developer Tools & 70+ REST APIs
+# ToolPipe - 238+ Free Developer Tools & APIs
 
 Free, open-source developer tools suite. No signup, no tracking, no nonsense.
 
-## Tools
+**[Try it now](https://cosai-labs.github.io/toolpipe/)** | **[Official MCP Registry](https://registry.modelcontextprotocol.io)**
 
-| Tool | Description |
-|------|-------------|
-| JSON Formatter | Format, validate, and minify JSON |
-| Regex Tester | Test regex patterns with live matching |
-| Base64 Encoder | Encode and decode Base64 strings |
-| UUID Generator | Generate v4 UUIDs |
-| Password Generator | Cryptographically secure passwords |
-| QR Code Generator | Create QR codes from any text |
-| JWT Decoder | Decode and inspect JWT tokens |
-| SQL Formatter | Beautify and format SQL queries |
-| Hash Generator | SHA-256, MD5, SHA-1, SHA-512 |
-| Color Picker | Pick colors with hex/rgb/hsl conversion |
-| Diff Checker | Compare text with line-by-line diff |
-| CSV to JSON | Convert CSV data to JSON |
-| Markdown Preview | Live markdown rendering |
-| Cron Expression Generator | Build cron expressions visually |
-| URL Encoder | Encode and decode URLs |
-| ...and 35+ more | [See all tools](https://cosai-labs.github.io/toolpipe/) |
+## MCP Server (for AI Agents)
 
-## API
+ToolPipe is available as an MCP (Model Context Protocol) server. Add to your Claude Code, Cursor, or any MCP-compatible client:
 
-70+ REST API endpoints. Free tier: 100 calls/day, no API key needed.
+```json
+{
+  "mcpServers": {
+    "toolpipe": {
+      "url": "https://toolpipe.dev/mcp"
+    }
+  }
+}
+```
+
+Listed on the **Official MCP Registry** as `io.github.COSAI-Labs/toolpipe-mcp-server` (v1.20.0).
+
+## Tools (238+)
+
+### Text & Data Processing
+- JSON Formatter, Validator, Minifier
+- JSON to CSV, CSV to JSON
+- Base64 Encode/Decode
+- Markdown to HTML
+- Text Analysis (word count, readability, sentiment)
+- ROT13, URL Encode/Decode
+- Lorem Ipsum Generator
+
+### Code & DevOps
+- Code Review (AI-powered)
+- Dockerfile Generator
+- .gitignore Generator
+- SQL Formatter
+- Regex Tester
+- JWT Decoder
+- Cron Expression Parser
+
+### Web & Network
+- DNS Lookup (A, AAAA, MX, NS, TXT)
+- WHOIS Queries
+- SSL Certificate Checker
+- URL Metadata Extraction (Open Graph)
+- URL Shortener
+- HTTP Header Inspection
+- Security Header Analysis
+
+### Media & Visual
+- QR Code Generator
+- Image Resize & Convert
+- PDF Generation (HTML to PDF)
+- Color Converter (HEX/RGB/HSL)
+- CSS Gradient Generator
+- Favicon Extraction
+
+### Utilities
+- UUID Generator (v4)
+- Password Generator
+- Timestamp Converter
+- IP Geolocation
+- User Agent Parser
+- Diff Checker
+
+## REST API
+
+238+ endpoints. Free tier: no API key needed.
 
 ```bash
 # Generate QR code
-curl https://assessing-scoop-authorities-sheet.trycloudflare.com/api/qr?data=hello
+curl -X POST https://toolpipe.dev/qr/generate \
+  -H "Content-Type: application/json" \
+  -d '{"data": "https://example.com"}'
+
+# Format JSON
+curl -X POST https://toolpipe.dev/json/format \
+  -H "Content-Type: application/json" \
+  -d '{"json": "{\"key\":\"value\"}"}'
+
+# DNS Lookup
+curl "https://toolpipe.dev/dns/lookup?domain=github.com"
 
 # Generate UUID
-curl https://assessing-scoop-authorities-sheet.trycloudflare.com/api/uuid
+curl https://toolpipe.dev/uuid/generate
 
 # Hash text
-curl https://assessing-scoop-authorities-sheet.trycloudflare.com/api/hash?text=hello&algo=sha256
-
-# Convert colors
-curl https://assessing-scoop-authorities-sheet.trycloudflare.com/api/color/convert?color=ff5733
-
-# Get crypto prices
-curl https://assessing-scoop-authorities-sheet.trycloudflare.com/api/crypto/prices
+curl -X POST https://toolpipe.dev/hash/generate \
+  -H "Content-Type: application/json" \
+  -d '{"text": "hello", "algorithm": "sha256"}'
 ```
-
-[Full API Documentation](https://assessing-scoop-authorities-sheet.trycloudflare.com/docs)
 
 ## Pricing
 
 | Plan | Price | API Calls |
 |------|-------|-----------|
-| Free | $0 | 100/day |
-| Pro | $29/mo | 10,000/day |
-| Enterprise | $199/mo | Unlimited |
+| Free | $0 | No limit (fair use) |
+| Pro | $9.99/mo | Priority support |
+| Enterprise | $99/mo | SLA + custom tools |
 
 Pay with crypto (ETH, USDC, USDT). No KYC required.
+
+## Links
+
+- [Web Tools](https://cosai-labs.github.io/toolpipe/)
+- [Official MCP Registry](https://registry.modelcontextprotocol.io)
+- [Source Code](https://github.com/COSAI-Labs/make-money-30day-challenge/tree/master/products)
 
 ## Support
 
