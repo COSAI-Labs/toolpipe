@@ -2,7 +2,7 @@
 
 Free, open-source developer tools suite. No signup, no tracking, no nonsense.
 
-**[Try it now](https://cosai-labs.github.io/toolpipe/)** | **[Official MCP Registry](https://registry.modelcontextprotocol.io)**
+**[Try it now](https://ithiel-labs.github.io/toolpipe/)** | **[Official MCP Registry](https://registry.modelcontextprotocol.io)**
 
 ## MCP Server (for AI Agents)
 
@@ -18,7 +18,7 @@ ToolPipe is available as an MCP (Model Context Protocol) server. Add to your Cla
 }
 ```
 
-Listed on the **Official MCP Registry** as `io.github.COSAI-Labs/toolpipe-mcp-server` (v1.20.0).
+Listed on the **Official MCP Registry** as `io.github.Ithiel-Labs/toolpipe-mcp-server` (v1.20.0).
 
 ## Tools (238+)
 
@@ -104,9 +104,9 @@ Pay with crypto (ETH, USDC, USDT). No KYC required.
 
 ## Links
 
-- [Web Tools](https://cosai-labs.github.io/toolpipe/)
+- [Web Tools](https://ithiel-labs.github.io/toolpipe/)
 - [Official MCP Registry](https://registry.modelcontextprotocol.io)
-- [Source Code](https://github.com/COSAI-Labs/make-money-30day-challenge/tree/master/products)
+- [Source Code](https://github.com/Ithiel-Labs/make-money-30-Day-experiment/tree/master/products)
 
 ## Support
 
